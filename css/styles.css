@@ -635,21 +635,9 @@ padding-bottom: 120px;
         }
         .cardoverlay{
         position: relative; 
-        overflow: hidden;
+        overflow: hidden; 
        }
-        .cardoverlay::before{
-        content: '';
-        display: inline-block;
-        position:absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #4D5AE5;
-        opacity:0;
-        transform: translateY(100%); 
-        transition: transform var(--transition-duration) var(--transition-timing);
-        }
         
-
         .nonvisieble{
         font-weight: 400;
         font-size: 16px;
@@ -657,26 +645,24 @@ padding-bottom: 120px;
         letter-spacing: 0.02em;
         color: #F4F4FD;
         position: absolute;
-        width: 296px;
-        top: 40px; 
-        left:50%;
-        transform: translateX(-50%);
+        width: 100%;
+        height: 100%;
+        top:0;
+        transform:translateY(100%) ;
+        padding: 40px 32px;
         opacity: 0;
+        background-color:#4D5AE5;
+        transition: transform var(--transition-duration) var(--transition-timing);
        }
         .portfolio-link:hover .nonvisieble {
             opacity:1;
+            transform: translateY(0%);
         }
         .portfolio-link:focus .nonvisieble {
             opacity: 1;
+            transform: translateY(0%);
         }
-        .portfolio-link:hover .cardoverlay::before{
-            opacity:1;
-            transform: translateY(0);
-        }
-        .portfolio-link:focus .cardoverlay::before {
-            opacity: 1;
-            transform: translateY(0);
-                }
+     
 
         /* Modalka */
         .backdrop{
